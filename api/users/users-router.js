@@ -4,7 +4,7 @@ const { restricted } = require('../auth/auth-middleware');
 
 const Users = require('./users-model');
 
-router.get('/', restricted, (req, res,) => {
+router.get('/', restricted, (req, res) => {
   Users.find()
     .then(users => {
       res.status(200).json(users);
